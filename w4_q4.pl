@@ -13,7 +13,7 @@ use Test::Simple tests => 2;
 
 
 
-use DNA 'random_sequence';
+use w4_q3 'random_sequence';
 
 
 
@@ -25,4 +25,4 @@ my $length = 50;
 
 ok( length( $dna ) == $length   , "string length checks" );
 
-ok( $dna =~ /^[ACGT]{$len}$/i , "string composition checks" );
+ok( $dna =~ /^[ACGT]{$length}$/i , "string composition checks" );
