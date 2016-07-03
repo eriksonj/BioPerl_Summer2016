@@ -1,0 +1,28 @@
+#w5_q4.txt
+
+Design a data model for a database of mRNA expression levels. 
+It should be fully normalized and should hold at least the 
+following information:
+
+Gene name
+Organism
+Gene sequence
+Tissue
+Expression level
+Position of start of open reading frame
+Position of stop of open reading frame
+Assume mature mRNAs (i.e., no introns). Assume expression 
+level is an integer value. To store string data longer than 
+255 characters, use the TEXT datatype. Note that to fully 
+normalize the requested data, you will need to use more than 
+one entity.
+
+
+FieldName				Datatype		Notes
+Gene Name				VARCHAR(255)	Primary Key
+Organism				VARCHAR(255)	Foreign Key
+Gene Sequence			TEXT
+Tissue					VARCHAR(255)	Foreign Key
+Expression Level		INT
+ORF Start Pos			INT
+ORF Stop Pos			INT
