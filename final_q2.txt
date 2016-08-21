@@ -1,0 +1,52 @@
+#!/usr/bin/perl
+
+#Pretend you're developing a database to support an application that helps people with 
+#comparison shopping when selecting gifts for friends. Generate a data model for this 
+#database -- this should include such entities as 'friends', 'gifts', 'retailers', 'prices'
+#, etc. Once you have generated the data model, write the SQL to create the database tables 
+#that implement the data model.
+
+
+
+
+CREATE TABLE friends
+(
+	gender TEXT NOT NULL,
+	friendship_level INT NOT NULL,
+	friend_id INT NOT NULL,
+	first_name TEXT NOT NULL,
+	last_name TEXT NOT NULL,
+	PRIMARY KEY (friend_id)
+);
+
+CREATE TABLE gifts
+(
+	item_id INT NOT NULL,
+	item_description TEXT NOT NULL,
+	price INT NOT NULL,
+	item_catagory TEXT NOT NULL,
+	units TEXT NOT NULL,
+	units_per_package  TEXT NOT NULL,
+	retailer  TEXT NOT NULL,
+	PRIMARY KEY (item_id)
+);
+
+CREATE TABLE retailers
+(
+	retailer_id INT NOT NULL,
+	retailer_name TEXT NOT NULL,
+	retailer_website TEXT,
+	retailer_locations TEXT,
+	PRIMARY KEY (retailer_id)
+);
+
+CREATE TABLE prices
+(
+	gift_id INT NOT NULL,
+	price INT NOT NULL,
+	discountPrice_10units INT NOT NULL,
+	PRIMARY KEY (gift_id)
+);​
+
+
+
